@@ -14,4 +14,11 @@ self.addEventListener("fetch", event => {
       return response || fetch(event.request);
     })
   );
+
 });
+
+cache.addAll([
+  "./",
+  "./index.html",
+  "./manifest.json"
+]);
